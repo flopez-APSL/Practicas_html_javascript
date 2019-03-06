@@ -1,0 +1,16 @@
+section p {
+  color: blue;
+}
+
+section > p {
+  background-color: yellow;
+}
+
+h2 + p + p {                            /* se direcciona con el signo + en el mismo nivel. en este ejemplo
+desde h2, pasamos al parafo, y EN EL SUBSIGUIENTE aplicamos la sentencia. */
+  text-transform: uppercase;
+}
+
+h2 ~ p {   /* se aplica a tod o en el mismo nivel */
+  border: 1px dashed black;
+}

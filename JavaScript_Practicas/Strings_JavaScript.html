@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Strings</title>
+</head>
+
+<body>
+
+
+
+<script>
+
+var cadena = 'Ornitorringo';
+
+document.write('Este ejemplo se realizará con la palabra Ornitorringo. '.bold()+'<br>');
+
+document.write(' ____________________________________________________________________________________________'.bold()+'<br>');
+
+document.write('<br>'+'Tamaño de un String \' .length\' : '+cadena.length+'<br>');
+
+document.write('Extraer una letra de un String\' corchetes y el indice: .[i]\' : '+cadena[0]+'<br>');
+
+document.write('Extraer la útlima letra de un String de tamaño desconocido:\' cadena[cadena.length-1]\' : '
+  +cadena[cadena.length-1]+'<br>');
+
+document.write('Encontrar substring en un string, dándonos el primer cáracter de la' +
+  'subcadena encontrada. \' .indexOf()\' : '+cadena.indexOf('torringo')+'<br>');
+
+document.write('En caso de que no la encuentre devuelve -1 \' .indexOf()\' : '+cadena.indexOf('otorrino')+'<br>');
+
+document.write('Para extraer cadenas \' .slice(0, 3)\' : '+cadena.slice(0, 3)+'<br>');
+
+document.write('Extrae una subcadena a partir del indice 3. \' .slice(3)\' : '+cadena.slice(3)+'<br>');
+
+document.write('Reemplazar una subcadena por otra \' .replace(Ornito, Otorrino)\' : '+cadena.replace('Ornito', 'Otorrino')+'<br>');
+
+isarroba = prompt('Tengo que adivinar si hay una \'@\' en tu texto.')
+
+if(isarroba.indexOf('@') === -1) {
+  document.write('No hay arrobas...')
+} else {
+  document.write('Por lo menos, has escrito una arroba. ')
+}
+
+
+
+</script>
+</body>
+
+</html>

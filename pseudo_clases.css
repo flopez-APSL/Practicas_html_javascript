@@ -1,0 +1,56 @@
+ul {
+  padding: 0;
+}
+
+li {
+  padding: 3px;
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+li:nth-of-type(even) {  /* aplicar a los pares. */
+  background-color: #cceec3;
+}
+
+li:nth-of-type(odd) {   /* aplicar al impar */
+  background-color: #eecd47;
+}
+
+/* SHEUDOELEMENTS: All elements with an attribute "href", which values
+   start with "http", will be added an arrow after its
+   content (to indicate it's an external link) */
+[href^=http]::after {
+  content: '⤴';
+}
+
+p::first-line {
+  font-weight: bold;
+}
+
+ p::first-letter{
+  font-size: 3em;
+  border: 1px solid black;
+  background: red;
+  display: block;
+  float: left;
+  padding: 2px;
+  margin-right: 4px;
+}
+
+otro ejemplo: li:nth-of-type(n) {  /* aplicar a todos. la frase 'otro ejemplo' está ahí para que falle el comando. */
+  background-color: #3c2ecc;
+}
+
+otro ejemplo: li:nth-of-type(2n) {   /* aplicar cada 2 */
+  background-color: #ee2b21;
+}

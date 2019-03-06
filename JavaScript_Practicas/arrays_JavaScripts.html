@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+
+<body>
+
+            <span class="output">
+
+            <input>
+
+            <button>Buscar</button>
+
+            <ul>
+
+
+
+            </ul>
+
+              </span>
+
+
+</body>
+
+<script>
+
+  document.write('Vamos a jugar con algunos arrays. '+'<br>')
+
+var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+
+  document.write('Tenemos este String: '+myData+'<br>');
+
+  document.write('Y con el metodo .split() lo transformamos en un array '+'<br>');
+
+  arrays = myData.split(',');
+
+  for (let i = 0; i < arrays.length ; i++) {
+
+    document.write(arrays[i]+'<br>');
+
+  }
+
+
+  document.write('Se puede generar el proceso inverso con el metodo .join(-.-)  '+'<br>');
+
+  var enjoing = '';
+
+  document.write(enjoing = arrays.join('-.-') + '<br>')
+
+   document.write('Para añadir un elemento a un array .push(Cardiff) por ejemplo: '+'<br>');
+
+   arrays.push('Cardiff')
+
+   for (let i = 0; i < arrays.length ; i++) {
+
+    document.write(arrays[i]+'<br>');
+
+  }
+
+   document.write('Ahora lo sacamos con el metodo .pop(): '+ arrays.pop()+'<br>');
+
+  document.write('Podemos añadir elementos por delante del array con .unshift(Madrid): '+'<br>');
+
+  arrays.unshift('Madrid');
+
+
+    for (let i = 0; i < arrays.length ; i++) {
+
+    document.write(arrays[i]+'<br>');
+
+  }
+
+    //-------------------------------------BUSCADOR QUE ELIMINA ELEMENTOS A PARTIR DE CINCO---------------------------
+
+
+
+var list = document.querySelector('.output ul');
+var searchInput = document.querySelector('.output input');
+var searchBtn = document.querySelector('.output button');
+
+list.innerHTML = '';
+
+var myHistory= [];
+
+searchBtn.onclick = function() {
+
+       if(searchInput.value !== '') {
+           myHistory.unshift(searchInput.value);
+
+           list.innerHTML = '';
+
+           for(var i = 0; i < myHistory.length; i++) {
+               itemText = myHistory[i];
+               var listItem = document.createElement('li');
+               listItem.textContent = itemText;
+               list.appendChild(listItem);
+           }
+
+           if(myHistory.length >= 5) {
+             myHistory.pop();
+           }
+
+           searchInput.value = '';
+           searchInput.focus();
+       }
+  }
+
+
+</script>
+
+</body>
+</html>

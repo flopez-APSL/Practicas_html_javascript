@@ -1,0 +1,70 @@
+/* All elements with the attribute "data-vegetable"
+   are given green text */
+[data-vegetable] {
+  color: green;
+}
+
+/* All elements with the attribute "data-vegetable"
+   with the exact value "liquid" are given a golden
+   background color */
+[data-vegetable="liquid"] {
+  background-color: goldenrod;
+}
+
+/* All elements with the attribute "data-vegetable",
+   containing the value "spicy", even among others,
+   are given a red text color */
+[data-vegetable~="spicy"] {
+  color: red;
+}
+
+/* selector presencia-valor añadido por mi para comprobar su acción */
+[data-quantity="25cl"] {
+  font-family: "URW Gothic L";
+}
+
+
+/* banderas de países en repositorio github */
+li[lang="en-GB"] {
+   background: url("http://mdn.github.io/learning-area/css/introduction-to-css/css-selectors/en-GB.png") 5px center no-repeat;
+ }
+
+li[lang="de"] {
+   background: url("http://mdn.github.io/learning-area/css/introduction-to-css/css-selectors/de.png") 5px center no-repeat;
+ }
+
+li[lang="es"] {
+   background: url("http://mdn.github.io/learning-area/css/introduction-to-css/css-selectors/es.png") 5px center no-repeat;
+ }
+
+li[data-perf*="inc"] { /* fixme: FITATE EN EL ASTERISCO. BUSCA EL VALOR EN TODO EL TEXTO* */
+   background-color: rgba(0,255,0,0.7);
+ }
+
+li[data-perf^="same"] { /* fixme: el ^. significa "que empiece por". */
+   background-color: rgba(0,0,255,0.5);
+ }
+
+li[data-perf*='dec'] {
+   background-color: rgba(255,0,0,0.7);
+ }
+
+li[data-perf*="pro"] {
+   font-weight: bold;
+ }
+
+li[data-perf*="rel"] {
+   font-style: italic;
+   color: #666;
+ }
+
+ol {
+   padding: 0;
+ }
+
+li {
+   padding: 3px 3px 3px 34px;
+   margin-bottom: 5px;
+   list-style-position: inside;
+ }
+

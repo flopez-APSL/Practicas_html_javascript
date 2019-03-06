@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Variables</title>
+</head>
+
+<body>
+
+<button> Press me</button>
+
+
+<div></div>
+
+  <!-- este div recibirá texto desde javascript -->
+  <div id="div1">El texto superior se ha creado dinámicamente.</div>
+
+ <div id="div2"></div>
+
+
+<script>
+
+var button = document.querySelector("button");
+
+button.onclick = function () {
+  var name = prompt('Dime tu nombre, y te haré reína de un jardín de rosas: ');
+
+  alert('Ahyyyy '+name+' que eres de ingenuo...');
+}
+
+// var myName = 'Chris';
+// var myName = 'Bob';
+//
+// let myName2 = 'Chris';
+// let myName2 = 'Bob'; procurar usar let en vez de var.
+
+//-------------------------------------------IMPRIMIR UN ARRAY--------------------------------------------------
+
+var myNameArray = ['Chris', 'Bob', 'Jim'];
+var myNumberArray = [10,15,40];
+
+for (let i = 0; i < myNameArray.length; i++) {
+
+  document.write('<br>' + myNameArray[i] + ' ' + myNumberArray[i]);
+
+}
+
+// -------------------------------------------IMPRIMIR TEXTO DINAMICAMENTE---------------------------------------
+
+  function addElement () {
+  // crea un nuevo div
+  // y añade contenido
+  var newDiv = document.createElement("div");
+
+  var newContent = document.createTextNode("¡Hola!¿Qué tal?");
+
+  newDiv.appendChild(newContent); //añade texto al div creado.
+
+  // añade el elemento creado y su contenido al DOM
+  var currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+
+addElement();
+//---------------------------------------IMPRIMIR DINAMICAMENTE UN DICCIONARIO -------------------------------------
+
+var dog = { name : 'Spot', breed : 'Dalmatian' };
+
+var newDiv2 = document.createElement("div");
+var mensaje = document.createTextNode("Esto es un diccionario imprimido dinámicamente: "+ dog.name);
+newDiv2.appendChild(mensaje);
+var diccionarioDiv = document.getElementById("div2");
+document.body.insertBefore(newDiv2, diccionarioDiv);
+
+
+
+
+//--------------------------------------------------FUNCION QUE IMPRIME EL TIPO DE VARIABLE-------------------------
+let cadena = ' soy una cadena ';
+document.write('<br>'+typeof (cadena))
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+
+
+</html>

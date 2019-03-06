@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Advivina mi Número. </title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>¿EN QUÉ NUMERO ESTOY PENSANDO?</h1>
+
+    <p>Tienes diez intentos para adivinar el número. Yo te avisaré si te acercas. (Entre el 1 y el 100).</p>
+
+    <div class="form">
+      <label for="guessField">Dame el numero: </label><input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+    <script>
+      // numero al azar.
+      var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+
+      // variables que mostraran los datos al jugador.
+      var guesses = document.querySelector('.guesses');
+      var lastResult = document.querySelector('.lastResult');
+      var lowOrHi = document.querySelector('.lowOrHi');
+
+      // variables de recogida de texto. el input.
+      var guessSubmit = document.querySelector('.guessSubmit');
+      var guessField = document.querySelector('.guessField'); // querySelector selecciona el elemento de referencia.
+
+      // contador y boton de re-inicio.
+      var guessCount = 1;
+      var resetButton;
+
+      guessField.focus();
+
+      function checkGuess() {
+
+          var userGuess = Number(guessField.value); // comprueba que lo introducido es un numero.
+
+          if (guessCount === 1) {  // comprueba que es el primer intento.
+
+          guesses.textContent = 'Número anterior: ';  // actualizamos los intentos previos si son más de uno.
+
+            }
+
+          guesses.textContent += userGuess + ' '; // añade lo introducido por el usuario a los intentos.
+
+          if (userGuess === randomNumber) {
+            lastResult.textContent = 'Felicidades! ¡Lo has hecho muy bien!';
+            lastResult.style.backgroundColor = 'green';
+            lowOrHi.textContent = '';   // pone en blanco el indicador.
+            setGameOver();  // comprueba si es correcto.
+          } else if (guessCount === 10) {
+            lastResult.textContent = '!!!GAME OVER!!!';  // se acabaron los intentos.
+            setGameOver();
+          } else {
+            lastResult.textContent = '¡Falló!'; // fallo el número. mensaje en rojo.
+            lastResult.style.backgroundColor = 'red';
+            if(userGuess < randomNumber) {  // como ha fallado el intento le damos una pista.
+              lowOrHi.textContent = 'Demasiado bajo... ';
+            } else if(userGuess > randomNumber) {
+              lowOrHi.textContent = 'Demasiado alto... ';
+            }
+          }
+
+          guessCount++;
+          guessField.value = '';  // vaciamos la caja de texto.
+          guessField.focus();
+
+
+
+      }
+
+      guessSubmit.addEventListener('click', checkGuess);
+
+            function setGameOver() {
+        guessField.disabled = true;
+        guessSubmit.disabled = true; // bloquea el campo de texto y el botón de envío.
+        resetButton = document.createElement('button'); // crea un elemento botón..
+        resetButton.textContent = '¿Quieres volver a jugar?';
+        document.body.appendChild(resetButton); // lo colocamos al pie de la pagina.
+
+        resetButton.addEventListener('click', resetGame);
+      }
+
+      function resetGame() {   // reiniciando el juego con esta función.
+
+        guessCount = 1; // contador a uno de nuevo.
+
+        var resetParas = document.querySelectorAll('.resultParas p');
+
+        for (var i = 0 ; i < resetParas.length ; i++) {
+          resetParas[i].textContent = '';
+        }  // limpia todos los parrafos.
+
+        resetButton.parentNode.removeChild(resetButton); // elimina el botón de re-inicio.
+
+        guessField.disabled = false;
+        guessSubmit.disabled = false;    // desbloquea el campo de texto y el botón de envío.
+        guessField.value = '';
+        guessField.focus();
+
+        lastResult.style.backgroundColor = 'white';  // blanquea el fondo de mensajes.
+
+        randomNumber = Math.floor(Math.random() * 100) + 1; // gemeramos un nuevo numero.
+      }
+
+      // style.boxShadow = '3px 3px 6px black' genera un chulisimno efecto sombra a la caja de texto.
+
+    </script>
+
+  </body>
+
+</html>
+
+

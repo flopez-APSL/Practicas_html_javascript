@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply JavaScript example</title>
+  </head>
+  <body>
+
+    <button id="prueba">Click me</button>
+
+    <button>Click your mother... </button>
+
+    <button>Click clack, clonk!! </button>
+
+    <button>Click click, click, el grillo canta así.. </button>
+
+  <script>
+
+    function  createParragraph() {
+
+      var para = document.createElement('p');
+
+      // probando capturar el texto de los botones.
+      // pero solo me funciona con el atributo ID.
+      para.textContent = document.getElementById('prueba').innerHTML;
+
+      document.body.appendChild(para);
+
+    }
+
+    var buttons = document.querySelectorAll('button');
+
+  // este bucle es para que funcione con todas las etiquetas button. Se añadan más o se quiten,
+    // siempre funcionará.
+    for (var i = 0; i < buttons.length; i++) {
+
+      buttons[i].addEventListener('click', createParragraph)
+    }
+
+
+  </script>
+  </body>
+</html>

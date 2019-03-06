@@ -1,0 +1,80 @@
+/* General styles */
+
+body {
+  margin: 0;
+}
+
+body > * {
+  padding: 10px;
+  font-size: 20px;
+  border: 20px solid rgba(0,0,0,0.5);
+}
+
+/* specific boxes */
+
+header, footer {
+  background-color: blue;
+  color: white;
+}
+
+main {
+  background-color: yellow;
+  border-width: 60px thin;
+  width: 80%;
+  margin-top: -50px;
+
+}
+
+header {
+
+}
+
+footer {
+  margin-top: 15px; /* no afecta */
+
+}
+
+p {
+  width  : 400px;
+  height : 2.5em;
+  padding: 1em 1em 1em 1em;
+  border : 1px solid black;
+}
+
+.autoscroll { overflow: auto;    }
+.clipped    { overflow: hidden;  }
+.default    { overflow: visible; }
+
+div {
+  width  : 60px;
+  height : 60px;
+  border : 20px solid rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin : 20px 0;
+
+  background-size    : 140px;
+  background-position: center;
+  background-image   : url('https://mdn.mozillademos.org/files/11947/ff-logo.png');
+  background-color   : gold;
+}
+
+.default     { background-clip: border-box;  }
+.padding-box { background-clip: padding-box; }
+.content-box { background-clip: content-box; }
+
+p {
+  padding : 1em;
+  border  : 1px solid black;
+}
+
+span {
+  padding : 0.5em;
+  border  : 1px solid green;
+
+  /* That makes the box visible, regardless of its type */
+  background-color: yellow;
+}
+
+.inline       { display: inline;       }
+.block        { display: block;        }
+.inline-block { display: inline-block; }

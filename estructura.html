@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8">
+    <title>My page title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <!-- Aquí empieza el encabezado principal que se mantendrá en todasa las páginas de nuestro sitio web -->
+
+    <header>
+      <h1>This is The Header</h1>
+
+      <!-- Aunque no es obligatorio, es una práctica común el incluir el menú de navegación: nav, dentro de
+      la cabecera o encabezado de la página -->
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Un formulario de búsqueda es una forma no-lineal de realizar busquedas en un sitio web. -->
+
+        <form>
+          <input type="search" name="q" placeholder="Search query">
+          <input type="submit" value="Go!">
+        </form>
+
+      </nav>
+
+    </header>
+
+    <!-- Aquí empieza el contenido principal de nuestra página -->
+    <main>
+
+      <!-- Incluimos un artículo -->
+      <article>
+        <h2>Sobre la estructuración de una página web</h2>
+
+        <ul>
+          <li>'main' contendrá el contenido único de esta página.<br> Utilizaremos 'main' solamente una vez para cada página,
+          y lo situaremos inmediatamente interior al elemento 'body'.<br>
+          Mejor que no lo anidemos con otros elementos. </li><br><hr>
+          <li> 'article' Encuadra un bloque de contenido que tiene sentido por sí mismo aparte del resto de la página<br>
+            (por ejemplo una entrada en un blog). </li><br><hr>
+          <li>'section' Es parecido al elemento 'article', pero se usa más para agrupar cada parte de la página que,<br>
+            por su funcionalidad, constituye una sección en sí misma (por ejemplo un mini-mapa, o un conjunto de titulares y resúmenes).<br>
+            Se considera una buena práctica comenzar cada una de estas secciones con un título 'heading';<br>
+            nótese que podemos subdividir artículos 'article's en distintas secciones 'section's,<br>
+            o también 'section's en distintos artículos 'article's, dependiendo del contexto. </li><br><hr>
+          <li>'aside' Incluye contenido que no está directamente relacionado con el contenido principal,<br>
+            pero que puede aportar información adicional relacionada indirectamente con él<br>
+            (resúmenes, biografías del autor, links relacionados, etc.).</li><br><hr>
+          <li>'header' Representa un grupo de contenido introductorio. Si este es "hijo" de un elemento 'body'<br>
+            entonces se convertirá en el encabezado principal del sitio web, pero si es hijo de un elemento 'article'<br>
+            o un elemento 'section' entonces simplemente será el encabezado particular de cada sección<br>
+            (por favor no confundir esto con  títulos y encabezamientos).</li><br><hr>
+          <li>'footer' Representa el contenido del pie de página. </li><br>
+
+        </ul>
+
+
+
+      <!-- el contenido lateral puede también estar anidado en el apartado principal (main) -->
+      <aside>
+        <h2>Related</h2>
+
+        <ul>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">Oh I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well...</a></li>
+        </ul>
+      </aside>
+
+    </main>
+
+    <!-- Y aquí está el pie de página principal que utilizaremos en todas las páginas de nuestro sitio web -->
+
+    <footer>
+      <p>©Copyright 2019 by Superloper Developer. All rights reversed.</p>
+    </footer>
+
+  </body>
+</html>
