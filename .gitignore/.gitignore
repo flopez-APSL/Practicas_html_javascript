@@ -1,0 +1,9 @@
+archive
+node_modules
+package-lock.json
+dist
+src
+test
+.idea
+.travis
+ 
