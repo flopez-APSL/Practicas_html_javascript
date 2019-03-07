@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Grid</title>
+
+   <style>
+
+      body {
+
+  background: white;
+
+      }
+
+    .container,
+    .container-fluid {
+
+        background: #ff6970;
+
+      }
+     /* Los pixeles determinan la frontera. A partir de 576 para adelante, se verá en este color. */
+      @media screen and (min-width: 576px) {
+
+               .container {background: #d2ffa5;}
+
+      }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+<section>
+
+      <div class = "container">
+
+        <div class = "row text-center">
+              <div class = " col-3 border border-dark">
+                      <p>                  columna 1                 </p>
+                      <p>                  columna 1                 </p>
+                      <p>                  columna 1                 </p>
+                      <p>                  columna 1                 </p>
+              </div>
+              <div class = " col-3 border border-dark">
+                      <p>                  columna 2                 </p>
+                      <p>                  columna 2                 </p>
+                      <p>                  columna 2                 </p>
+                      <p>                  columna 2                 </p>
+
+              </div>
+              <div class = " col-3 border border-dark">
+                      <p>                   columna 3                </p>
+                      <p>                   columna 3                </p>
+                      <p>                   columna 3                </p>
+                      <p>                   columna 3                </p>
+
+              </div>
+              <div class = " col-3 border border-dark">
+                      <p>                   columna 4                </p>
+                      <p>                   columna 4                </p>
+                      <p>                   columna 4                </p>
+                      <p>                   columna 4                </p>
+
+              </div>
+        </div>
+
+      </div>
+
+</section>
+
+
+
+      <div class="container">
+
+            <div class = "row">
+                      <div class="col-md-6 border border-dark">
+                      <p> Adaptado para moviles. </p>
+                        <p>Comprueba como ésta columna está en horizonal con una vista para computadoras,
+                          y en vertical con una vista para moviles. </p>
+                        <p class="text-sm-center">Si me ves con un movil, me centro.</p>
+                      </div>
+                      <div class="col-md-6 border border-dark">
+                      <p> Adaptado para moviles. </p>
+                        <p>Comprueba como ésta columna está en horizonal con una vista para computadoras,
+                          y en vertical con una vista para moviles. </p>
+
+                        <p class="text-sm-center">Si me ves con un movil, dejaré de estar centrado.</p>
+                      </div>
+            </div>
+
+
+      </div>
+
+</body>
+
+</html>

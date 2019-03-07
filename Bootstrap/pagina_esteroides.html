@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!-- " shrink-to-fit=no " anula la reducción de la ventana para adaptarse al contenido desbordante. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+          crossorigin="anonymous">
+    <style>
+
+      #introduction {
+                /* linear gradient, degrada los colores de la imagen. */
+                background: linear-gradient(rgba(100,181,246 ,1), rgba(0,0,0,0.8)),
+                url('http://bit.ly/2fBj6OJ') 0% 0%/cover
+
+      }
+
+
+      #info-3 {
+                /* linear gradient, degrada los colores de la imagen. */
+                background: linear-gradient(rgba(100,181,246 ,1), rgba(0,0,0,0.2)),
+                url('data:image/jpeg;base64,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') 0% 0%/cover
+
+      }
+
+
+      .fill-viewport {
+              min-height: 100vh  /* Llenamos con nuestra imagen toda la pagina.  */
+      }
+
+
+      .text-white-40 {
+              color: rgba(255,255,255,0.4)
+
+      }
+
+
+      .text-white-70 {
+              color: rgba(255,255,255,0.7)
+      }
+
+
+      .text-black-40 {
+              color: rgba(0,0,0,0.4)
+      }
+
+
+      .fill-80-viewport {
+              min-height: 80vh
+      }
+
+
+      @media screen and (min-width: 768px ){
+
+              .basis-md-50 {
+                  flex-basis: 50%
+                  }
+      }
+
+
+      .text-black-70 {
+                color: rgba(0,0,0,0.7)
+
+      }
+
+
+      .text-black-40 {
+                color: rgba(0,0,0,0.4)
+
+      }
+
+
+       .list-border-y li {
+         border-top: 1px solid
+
+
+       }
+
+
+        .list-border-y li: last-child {
+                border-bottom: 1px solid
+
+
+        }
+
+
+      .list-border-black-20 li,
+      .list-border-black-20 li:last-child {
+                border-color: rgb (0,0,0,0.2)
+
+
+        }
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+
+     <div class="container">
+
+                    <section id = "introduction">
+                             <div class = "container ">
+                              <div class = "row fill-viewport align-items-center"> <!-- este div llenará con su imagen toda la pagina -->
+                                 <div class = " col-12 col-md-6">
+                                        <h1 class="text-white"> Codificación sobre esteroides </h1>
+                                            <p class="lead text-white-70"> Deje de contratar ingenieros para escribir su código.
+                                              Simplemente use el script de 1kb que resuelve mágicamente todos
+                                              sus problemas y algoritmos. </p>
+                                            <a href="#" role="button" class="btn btn-danger"> Pruébelo ayer </a>
+
+
+                                 </div>
+                              </div>
+                             </div>
+                    </section>
+                    <section id = "info - 1">
+                                <div class = " container ">
+                                  <div class = " row pt-5 align-items-center ">
+                                    <!-- none, oculta de forma predeterminada, y md-block muestra la imagen
+                                    a partir de dispositivos medianos. align-self-end alinea con parte inferior del contenedor. -->
+                                    <div class="col d-none d-md-block align-self-end"> <!-- clases de visualización -->
+                                              <img src="http://bit.ly/2fyUtlS" class="img-fluid"/>
+                                    </div>
+                                    <div class = "col">
+                                        <h6 class = " text-uppercase text-black-40 "> información de
+                                          millones de dólares
+                                        </h6>
+                                        <h2> Hacemos lo que hacen nuestros competidores, pero con un 500% más de efectividad </h2>
+                                        <p> Este es el único texto que se ve siempre. Tanto en dispositivos pequeños, medianos
+                                        o grandes. </p>
+
+                                      <! - las columnas se pueden anidar ->
+                                                      <div class = "row">
+                                                         <div class = "d-none d-md-block col">
+                                                            <h5> Función alarma de papel higiénico </h5>
+                                                           <p> Esto se ve en dispositivos <strong>grandes y medianos.</strong> </p>
+                                                             <a href="#" class="d-block "> más información </a>
+                                                          </div>
+                                                          <div class = " d-none d-lg-block col ">
+                                                             <h5> Función Encuéntrame Parking </h5>
+                                                            <p> Esto se ve <strong> solamente en dispositivos grandes</strong> </p>
+                                                              <a href="#" class="d-block"> obtener más información </a>
+                                                          </div>
+                                                      </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                  </section>
+                  <section id = "info-2" class = "bg-dark">
+                        <div class = "container">
+                           <div class = "row align-items-center fill-80-viewport">
+                             <div class = "col-12 col-md-6 my-5 order-2 order-md-1 ">
+                               <p class =" text-uppercase text-white-40 "> <strong> desarrollo más rápido </strong> </p>
+                               <h2 class = "text-white"> La codificación nunca ha sido tan rápida. Es casi mágico </h2>
+                               <p class = "lead text-white-70"> Deja de contratar ingenieros para escribir tu código.
+                                 Simplemente instale un script que resuelva mágicamente todos sus problemas. </p>
+                               <a class="btn btn-light d-block d-md-inline-block py-3" href="#" role="button">Read the docs</a>
+                             </div>
+                              <pre class="col-12 col-md-6 my-5 order-1 order-md-2 py-4 border border-info rounded text-info">
+                              <span> 1 </span> <span> //codingSteroids.js </span>
+                              <span> 2 </span>
+                              <span> 3 </span> const data = {
+                              <span> 4 </span> "propósito": {
+                              <span> 5 </span> "getId": "#element",
+                              <span> 6 </span> "companyName": "coolStartup",
+                              <span> 7 </span>}
+                              <span> 8 </span>}
+                              <span> 9 </span>
+                              <span> 10 </span> codificación de función Esteroides (
+                              <span> 11 </span> datos,
+                              <span> 12 </span>getSteroidsType
+                              <span> 13 </span>)
+                              <span> 14 </span>
+                              <span> 15 </span> función getSteroidsType () {
+                              <span> 16 </span> return "codeHellish!"
+                              <span> 17 </span>}
+                              </pre>
+                           </div>
+                        </div>
+                    </section>
+                    <section id="info-3">
+                          <div class="container">
+                            <div class="row fill-80-viewport align-items-center justify-content-end text-white">
+                              <div class="col-12 basis-md-50">
+                                <h6 class="text-white-40">
+                                  Opinan los consumidores.
+                                </h6>
+                                <h3>"Me gusta hacerme dos tostadas con huevos camperos todas las mañanas.."</h3>
+                                <p class="text-uppercase text-white-70">Fundador, The EggMorning Fundation</p>
+                              </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section id="featured-on" class="bg-primary">
+                      <div class="container">
+                          <div class="row py-5 text-center text-white">
+                            <div class="col-12">
+                                <i class="fa fa-3x fa-free-code-camp my-3 mx-5"
+                                   aria-hidden="true"></i>
+                                <i class="fa fa-3x fa-twitter my-3 mx-4"
+                                   aria-hidden="true"></i>
+                                <i class="fa fa-3x fa-facebook my-3 mx-4"
+                                   aria-hidden="true"></i>
+                                <i class="fa fa-3x fa-quora my-3 mx-4"
+                                   aria-hidden="true"></i>
+                                <i class="fa fa-3x fa-reddit my-3 mx-4"
+                                   aria-hidden="true"></i>
+                                <i class="fa fa-3x fa-pied-piper my-3 mx-4"
+                                   aria-hidden="true"></i>
+                                <i class="fa fa-3x fa-paypal my-3 mx-4"
+                                   aria-hidden="true"></i>
+                                <i class="fa fa-3x fa-product-hunt my-3 mx-4"
+                                   aria-hidden="true"></i>
+                            </div>
+                          </div>
+                      </div>
+                  </section>
+                    <section id="feature-rundown">
+                      <div class="container">
+                        <div class="row mt-5">
+                              <div class="col-12 col-md-6 mx-auto mt-5 text-center">
+                                <h6 class="text-black-40 text-uppercase">
+                                  The bitter truth
+                                </h6>
+                                <h3 class="text-black-70">On a scale of 1 to 10, we make your life easier 10/10, period.</h3>
+                              </div>
+                            </div>
+                            <div class="row mb-5">
+                              <div class="col-12 col-md-4 text-center">
+                                      <img src="http://bit.ly/2yE6Z8h" class="mt-4"/>
+                                      <p>
+                                        <strong class="text-info">24/7 support</strong>  For
+                                        your sake, we do not sleep.
+                                      </p>
+                                    </div>
+                                    <div class="col-12 col-md-4 text-center">
+                                      <img src="http://bit.ly/2yE6Z8h" class="mt-4"/>
+                                      <p>
+                                        <strong class="text-info">Fast</strong>  Like flash.
+                                      </p>
+                                    </div>
+                                    <div class="col-12 col-md-4 text-center">
+                                      <img src="http://bit.ly/2yE6Z8h" class="mt-4"/>
+                                      <p>
+                                        <strong class="text-info">Reliable</strong>  We never have a server downtime.
+                                      </p>
+                                    </div>
+                                    <div class="col-12 col-md-4 text-center">
+                                      <img src="http://bit.ly/2yE6Z8h" class="mt-4"/>
+                                      <p>
+                                        <strong class="text-info">Computational Analysis</strong>  like no other.
+                                      </p>
+                                    </div>
+                                    <div class="col-12 col-md-4 text-center">
+                                      <img src="http://bit.ly/2yE6Z8h" class="mt-4"/>
+                                      <p>
+                                        <strong class="text-info">Analytics</strong>  like no other.
+                                      </p>
+                                    </div>
+                                    <div class="col-12 col-md-4 text-center mb-5">
+                                      <img src="http://bit.ly/2yE6Z8h" class="mt-4"/>
+                                      <p>
+                                        <strong class="text-info">Affordable</strong> as coffee.
+                                      </p>
+                                    </div>
+                              </div>
+                          </div>
+                    </section>
+                    <section id="pricing" class="bg-light">
+                        <div class="container fill-80-viewport">
+                            <div class="row">
+                              <div class="col-12 col-md-6 mx-auto text-center my-5">
+                                  <h6 class="text-black-40 text-uppercase">
+                                    pricing
+                                  </h6>
+                                  <h3 class="text-black-70">we are very affordable</h3>
+                                </div>
+                            </div>
+                            <div class="row pb-5">
+                              <div class="col-12 col-md-4 px-2 my-4 text-center">
+                                    <h6 class="text-black-40 text-uppercase">
+                                     Personal
+                                       </h6>
+                                    <img src="http://bit.ly/2y9EpP2" alt="$9 per month" class="my-4"/>
+                                    <p>Good enough power</p>
+                                    <ul class="list-unstyled list-border-black-20 list-border-y text-left text-black-70">
+                                      <li class="py-2"><strong>10k</strong> monthly requests</li>
+                                      <li class="py-2"><strong>9am-5pm</strong>
+                                        technical support</li>
+                                      <li class="py-2"><strong>Public</strong>
+                                        API access</li>
+                                    </ul>
+                                    <a class="btn btn-block btn-primary border-0 text-white py-3" href="#">Start</a>
+                            </div>
+
+                            <div class="col-12 col-md-4 px-2 my-4 text-center">
+                                    <h6 class="text-black-40 text-uppercase">
+                                        Business
+                                      </h6>
+                                    <img src="http://bit.ly/2xKjVeS" alt="$49 per month" class="my-4">
+                                    <p>Perfect for small
+                                      businesses.</p>
+                                    <ul class="list-unstyled  list-border-black-20 list-border-y text-left text-black-70">
+                                      <li class="py-2"><strong>100k</strong> monthly requests</li>
+                                      <li class="py-2"><strong>9am-5pm</strong>
+                                        technical support</li>
+                                      <li class="py-2"><strong>Public and Private</strong>
+                                        API access</li>
+                                    </ul>
+                                    <a class="btn btn-block btn-primary border-0 text-white py-3" href="#">Start</a>
+                            </div>
+
+                            <div class="col-12 col-md-4 px-2 my-4 text-center">
+                                    <h6 class="text-black-40 text-uppercase">
+                                        Corporate
+                                      </h6>
+                                    <img src="http://bit.ly/2wjsVEl" alt="$119 per month" class="my-4"/>
+                                    <p>Unlimited super powers</p>
+                                    <ul class="list-unstyled list-border-black-20 list-border-y text-left text-black-70">
+                                      <li class="py-2"><strong>10,000k</strong> monthly requests</li>
+                                      <li class="py-2"><strong>9am-5pm</strong>
+                                        technical support</li>
+                                      <li class="py-2"><strong>Public and Private</strong>
+                                        API access</li>
+                                    </ul>
+                                    <a class="btn btn-block btn-primary border-0 text-white py-3" href="#">Start</a>
+                             </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section id="footer" class="bg-dark">
+                        <div class="container">
+                          <div class="row fill-40-viewport py-5 text-white-70 align-items-center">
+                              <div class="col-12 col-md-6">
+                                <ul class="list-unstyled">
+                                  <li><h6 class="text-white">ABOUT</h6></li>
+                                  <li>We’ve been working on Coding on Steroids
+                                    for the all our lives.
+                                    A groundbreaking tech deserves such dedication, huh?
+                                    If you’d like to learn more, or are interested in a job,
+                                    contact us anytime at
+                                    <a class="text-white" href="https://twitter.com/OhansEmmanuel" target="_blank">@ohansemmanuel</a></li>
+                                </ul>
+                              </div>
+                              <div class="col-12 col-md-2">
+                                <ul class="list-unstyled">
+                                  <li><h6 class="text-white">PRODUCT</h6></li>
+                                  <li>Features</li>
+                                  <li>Examples</li>
+                                  <li>Tour</li>
+                                  <li>Gallery</li>
+                                </ul>
+                              </div>
+                              <div class="col-12 col-md-2">
+                                <ul class="list-unstyled">
+                                  <li><h6 class="text-white">APIS</h6></li>
+                                  <li>Rich data</li>
+                                  <li>Simple</li>
+                                  <li>Real time</li>
+                                  <li>Social</li>
+                                </ul>
+                              </div>
+                              <div class="col-12 col-md-2">
+                              <ul class="list-unstyled">
+                                <li><h6 class="text-white">LEGAL</h6></li>
+                                <li>Terms</li>
+                                <li>Legal</li>
+                                <li>Privacy</li>
+                                <li>License</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </section>
+     </div>
+
+
+  </body>
+
+</html>
