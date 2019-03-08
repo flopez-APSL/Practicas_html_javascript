@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* Sass creado para probar la importación en Sass */
+/* Además es un parcial. Es decir, no generará un archico css
+porque su función es ser importado. lo importará el archivo base.scss */
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 15px;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+
+/*# sourceMappingURL=base.css.map */
